@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>тест фласка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    button {
+      background-color: #1E90FF;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn" onclick="changeColor()">Нажми меня</button>
+
+  <script>
+    function changeColor() {
+      const btn = document.getElementById('btn');
+      btn.style.backgroundColor = '#AAFF00';
+      btn.style.color = 'black';
+      btn.textContent = 'Перенаправляю на вторую...';
+      
+      setTimeout(() => {
+        window.location.href = '/second';
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
